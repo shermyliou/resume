@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=New+Tegomin&family=Noto+Sans+TC:wght@100..900&family=Zen+Kaku+Gothic+Antique&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=New+Tegomin&family=Noto+Sans+TC:wght@100..900&family=Zen+Kaku+Gothic+Antique&display=swap");
 
 /* Reset */
 * {
@@ -44,7 +44,7 @@ body {
   padding: 0;
 }
 
-section{
+section {
   margin: 24px auto;
 }
 
@@ -128,6 +128,221 @@ nav > ol > li > a:hover {
 }
 /* End header */
 /* Banner */
+#Banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#Banner > .container {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  justify-content: center;
+  align-items: center;
+}
+.banner-group span {
+  font-size: 100px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+.h,
+.o {
+  position: absolute;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+.banner-group:first-child > span:first-child {
+  margin-right: 50px;
+}
+.banner-group:nth-child(2) > span:nth-child(2) {
+  margin-right: 50px;
+}
+.h {
+  height: 213px;
+  top: 40.3%;
+  left: 35.6%;
+  font-size: 140px;
+  transform: rotateZ(110deg);
+  animation: wrench 8s;
+  animation-fill-mode: forwards;
+}
+.o {
+  height: 65.4px;
+  top: 51.6%;
+  left: 40.9%;
+  font-size: 46.7px;
+  transform: rotateZ(210deg);
+  animation: screw 8s;
+  animation-fill-mode: forwards;
+}
+.h:hover,
+.o:hover,
+.banner-group > span:hover {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--primary-400);
+  font-style: italic;
+}
+.circle {
+  position: absolute;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+@keyframes wrench {
+  0% {
+  }
+  16% {
+    transform: rotateZ(70deg);
+  }
+  26% {
+    transform: rotateZ(100deg);
+  }
+  43% {
+    transform: rotateZ(50deg);
+  }
+  52% {
+    transform: rotateZ(100deg);
+  }
+  68% {
+    transform: rotateZ(40deg);
+  }
+  78% {
+    transform: rotateZ(110deg);
+    top: 40.3%;
+    left: 35.6%;
+    font-size: 140px;
+  }
+  100% {
+    top: 31.7%;
+    left: 23.3%;
+    transform: rotateZ(360deg);
+    font-size: 100px;
+  }
+}
+@keyframes screw {
+  0% {
+  }
+  16% {
+    transform: rotateZ(210deg);
+  }
+  26% {
+    transform: rotateZ(240deg);
+  }
+  43% {
+    transform: rotateZ(240deg);
+  }
+  52% {
+    transform: rotateZ(290deg);
+  }
+  68% {
+    transform: rotateZ(290deg);
+  }
+  78% {
+    transform: rotateZ(359deg);
+    top: 51.6%;
+    left: 40.9%;
+    font-size: 46.7px;
+  }
+  100% {
+    font-size: 100px;
+    top: 50.3%;
+    left: 47.6%;
+    transform: rotateZ(720deg);
+  }
+}
+.first-c {
+  opacity: 0;
+  font-size: 1px;
+  background-image: radial-gradient(
+    circle,
+    #c55300,
+    #d4610a,
+    #e27015,
+    #f17e1f,
+    #ff8d28
+  );
+  background-clip: text;
+  color: transparent;
+  z-index: -1;
+  animation: first-c-appear 0.5s cubic-bezier(0.25, 1, 0.5, 1) 8s;
+  animation-fill-mode: forwards;
+}
+@keyframes first-c-appear {
+  0% {
+    opacity: 0;
+    font-size: 1px;
+  }
+  100% {
+    opacity: 1;
+    font-size: max(120vh, 120vw);
+    line-height: max(100vh, 100vw);
+  }
+}
+/* .absl {
+  position: absolute;
+}
+.absl:nth-child(1) {
+  font-size: 108px;
+  transform: rotateZ(43deg);
+  top: 32%;
+  left: 6%;
+}
+.absl:nth-child(2) {
+  font-size: 108px;
+  transform: rotateZ(-46deg);
+  top: 26%;
+  left: 14%;
+}
+.absl:nth-child(3) {
+  font-size: 108px;
+  transform: rotate(71deg);
+  top: 23%;
+  left: 33%;
+}
+.absl:nth-child(4) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+}
+.absl:nth-child(5) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+}
+.absl:nth-child(6) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+}
+.absl:nth-child(7) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+}
+.absl:nth-child(8) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+}
+.absl:nth-child(9) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+}
+.absl:nth-child(10) {
+  font-size: 408px;
+  transform: rotateZ(134deg);
+  top: 20%;
+  left: 28%;
+} */
 h1 {
   line-height: 80%;
 }
@@ -290,7 +505,7 @@ h1 {
 
 /* End About */
 /* Exp */
-.exp-item{
+.exp-item {
   margin-bottom: 3rem;
 }
 .exp-item > ul > li {
